@@ -57,11 +57,11 @@
       $.ajax(  
     {  
         type:'get',  
-        url : 'http://www.baidu.com',  
+        url : 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json',  
         dataType : 'jsonp',  
         jsonp:"jsoncallback",  
         success  : function(data) {  
-            console.info(data);
+            console.info(data.city);
         },  
         error : function() {  
             alert('fail');  
