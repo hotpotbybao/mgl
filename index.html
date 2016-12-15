@@ -52,5 +52,22 @@
       <footer class="site-footer">
         <span class="site-footer-credits">Create by <a href="http://weibo.com/531511789" target="_blank"> @Hotpot </a> .</span>
       </footer>
-</section></body>
+</section>
+    <script>
+      $.ajax(  
+    {  
+        type:'get',  
+        url : 'http://www.baidu.com',  
+        dataType : 'jsonp',  
+        jsonp:"jsoncallback",  
+        success  : function(data) {  
+            console.info(data);
+        },  
+        error : function() {  
+            alert('fail');  
+        }  
+    }  
+); 
+    </script>
+  </body>
 </html>
