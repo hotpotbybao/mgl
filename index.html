@@ -58,12 +58,12 @@
       <script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp"></script>  
 </section>
     <script>
-      $.getJSON('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp&jsoncallback=?',function(data){
+      $.getJSON('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp',function(data){
         console.info('data:' + data);
       });
       $(function(){
         console.info(remote_ip_info.country);
-        $('#ipaddr').text(remote_ip_info.country + remote_ip_info.province + remote_ip_info.city);
+        $('#ipaddr').text("您是" + remote_ip_info.country + remote_ip_info.province + remote_ip_info.city + "的访客");
        })
        </script>
   </body>
