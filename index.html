@@ -25,6 +25,7 @@
     </section>
 
     <section class="main-content">
+      <h3 id="ipaddr"></h3>
       <h3>
 <a id="mgl动密" class="anchor" href="#mgl%E5%8A%A8%E5%AF%86" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MGL动密.</h3>
 
@@ -62,8 +63,8 @@
       });
       $(function(){
         console.info(remote_ip_info.country);
-         console.info('data:' + remote_ip_info.country + remote_ip_info.province + remote_ip_info.city);
-      })
+        $('#ipaddr').text(remote_ip_info.country + remote_ip_info.province + remote_ip_info.city);
+       })
        </script>
   </body>
 </html>
