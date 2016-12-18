@@ -12,7 +12,7 @@
   <body>
     <section class="page-header">
       <div style="max-width:64rem;margin:0 auto;text-align:left;">
-        <h1 class="project-name">MGL.ONE社区导向</h1>
+        <h1 class="project-name">MGL技术部落</h1>
         <h2 class="project-tagline"></h2>
         <a href="http://www.aofmall.com" class="btn" target="_blank">T恤定制商城</a>
         <a href="http://www.aofmall.com/wb/n/work/Work/index.t" class="btn" target="_blank">T恤定制系统</a>
@@ -53,26 +53,14 @@
         <span class="site-footer-credits">Create by <a href="http://weibo.com/531511789" target="_blank"> @Hotpot </a> .</span>
       </footer>
 <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>  
+      
+      <script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp"></script>  
 </section>
     <script>
-      var cbck = function(d) {
-        alert(1
-              );
-      }
-      $.ajax(  
-    {  
-        type:'get',  
-        url : 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp',  
-        dataType : 'jsonp',  
-        jsonp:"cbck", 
-        success  : function(data) {  
-            console.info(data.city);
-        },  
-        error : function() {  
-            console.info('fail');  
-        }  
-    }  
-); 
-    </script>
+     console.info(remote_ip_info);
+      $.getJson('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json',function(d){
+        console.info(d);
+      })
+       </script>
   </body>
 </html>
