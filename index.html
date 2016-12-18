@@ -57,7 +57,7 @@
       <script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp"></script>  
 </section>
     <script>
-      jQuery.getJSON('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp&jsoncallback=?',function(data,status,xhr){
+      $.getJSON('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp&jsoncallback=?',function(data){
         console.info('data:' + data);
       });
       $(function(){
