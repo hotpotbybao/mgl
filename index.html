@@ -57,10 +57,9 @@
       <script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp"></script>  
 </section>
     <script>
-     console.info(remote_ip_info);
-      $.getJson('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json',function(d){
-        console.info(d);
-      })
+      jQuery.getJSON('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json','',function(data,status,xhr){
+        console.info(data);
+      });
        </script>
   </body>
 </html>
