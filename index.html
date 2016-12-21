@@ -8,6 +8,46 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <style>
+      .mgl-click-right-wrap {
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    width: 130px;
+    z-index: 20160101;
+    display: none;
+}
+
+#mn_right {
+    margin: 0px;
+    border: 0px none;
+    padding: 0px;
+}
+.mgl-click-right-wrap li {
+    border-bottom: 1px solid #e8e9e7;
+    display: block;
+}
+
+.mgl-click-right-wrap li a {
+    color: #787977;
+    display: block;
+    line-height: 36px;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+.mgl-click-right-wrap li a:hover {
+	background-color: gray;
+	color: #fff;
+}
+.mgl-click-right-wrap li a span {
+    display: inline-block;
+    vertical-align: middle;
+}
+    </style>
   </head>
   <body>
     <section class="page-header">
@@ -44,17 +84,73 @@
       <footer class="site-footer">
         <span class="site-footer-credits">Create by <a href="http://weibo.com/531511789" target="_blank"> @Hotpot </a> .</span>
       </footer>
+      
+      <div class="mgl-click-right-wrap" id="mgl_click_right_wrap" style="left: 179px; top: 324px;">
+	<ul id="mn_right">
+		<li>
+			<a class="mgl-click-right-wrap-a" href="http://aofmall.com" rel="nofollow noindex" target="_blank">
+				<span class="glyphicon glyphicon-globe"></span>
+				<span id="_history">去商城首页</span>
+			</a>
+		</li>
+		<li>
+			<a class="mgl-click-right-wrap-a" href="javascript:void(0);" rel="pjax" id="reload">
+				<span class="glyphicon glyphicon-refresh"></span>
+				<span>刷新</span>
+			</a>
+		</li>
+		<li>
+			<a class="mgl-click-right-wrap-a" href="#" rel="nofollow noindex">
+				<span class="glyphicon glyphicon-envelope"></span>
+				<span>意见交流</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://aofmall.com/help/#items10" rel="nofollow noindex" class="mgl-click-right-wrap-a" target="_blank">
+				<span class="glyphicon glyphicon-info-sign"></span>
+				<span>关于</span>
+			</a>
+		</li>
+	</ul>
+</div>
 <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>  
       
       <script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp"></script>  
+       <script src="//cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
 </section>
     <script>
       $.getJSON('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp',function(data){
         console.info('data:' + data);
       });
       $(function(){
-        console.info(remote_ip_info.country);
-        $('#ipaddr').text("您是" + remote_ip_info.country + remote_ip_info.province + remote_ip_info.city + "的访客");
+             $('#ipaddr').text("您是" + remote_ip_info.country + remote_ip_info.province + remote_ip_info.city + "的访客");
+        
+        var rm = $('#mgl_click_right_wrap');
+        $(window).contextmenu(function(e){
+          e.stopPropagation();
+          e.preventDefault();
+          var pointX = e.pageX, pointY = e.pageY;
+          rm.css({left : pointX,top : pointY});
+          rm.show();
+          return;
+        }).click(function(){
+          rm.hide();
+        });
+
+        $('a#reload').click(function(){
+          window.location.reload(null);
+        })
+        
+        window.onkeydown = function(e) {
+          e = e || window.event;
+          if(e.keyCode === 123) {
+            mgl.m('控制台出不来了吧<br>请到www.aofmall.com寻求帮助','',{time : 5000});
+            e.stopPropagation();
+            e.preventDefault();
+            return false;
+          }
+        } 
+        
        })
        </script>
     
