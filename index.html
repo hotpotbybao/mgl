@@ -1,160 +1,107 @@
+
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>MGL by @Hotpot</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-	<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      .mgl-click-right-wrap {
-    background-color: #fff;
-    border: 1px solid #d5d5d5;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    left: 50%;
-    position: fixed;
-    top: 50%;
-    width: 130px;
-    z-index: 20160101;
-    display: none;
-}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MDUI | Material Design 样式的响应式前端框架</title>
+  <link rel="stylesheet" href="http://mdui-org.b0.upaiyun.com/source/dist/css/mdui.min.css?v=2873192a693ae603ce98084bbb84cb86"/>
+  <link rel="stylesheet" href="http://mdui-org.b0.upaiyun.com/assets/css/style.css"/>
+  <style>
+    #background-img {
+      background: url('http://mdui-org.b0.upaiyun.com/assets/img/background.jpg') no-repeat top;
+    }
+  </style>
+</head>
+<body>
 
-#mn_right {
-    margin: 0px;
-    border: 0px none;
-    padding: 0px;
-}
-.mgl-click-right-wrap li {
-    border-bottom: 1px solid #e8e9e7;
-    display: block;
-}
-
-.mgl-click-right-wrap li a {
-    color: #787977;
-    display: block;
-    line-height: 36px;
-    padding: 0 20px;
-    text-decoration: none;
-}
-
-.mgl-click-right-wrap li a:hover {
-	background-color: gray;
-	color: #fff;
-}
-.mgl-click-right-wrap li a span {
-    display: inline-block;
-    vertical-align: middle;
-}
-    </style>
-  </head>
-  <body>
-    <section class="page-header">
-      <div style="max-width:64rem;margin:0 auto;text-align:left;">
-        <h1 class="project-name">MGL技术部落</h1>
-        <h2 class="project-tagline"></h2>
-        <a href="http://www.aofmall.com" class="btn" target="_blank">T恤定制商城</a>
-        <a href="http://www.aofmall.com/wb/n/work/Work/index.t" class="btn" target="_blank">T恤定制系统</a>
-        <a href="#" class="btn" target="_blank">在线聊天系统</a>
-        <a href="http://www.mgl.one" class="btn" target="_blank">MGL社区</a>
-        <a href="http://www.mgl.tech" class="btn" target="_blank">MGL技术</a>
-        <a href="http://www.mgl.asia" class="btn" target="_blank">MGL亚洲</a>
-        <a href="http://www.mgl.cloud" class="btn" target="_blank">MGL云</a>
-       </div>
-    </section>
-
-    <section class="main-content">
-      <h3 id="ipaddr"></h3>
-      <h3><a id="mgl动密" class="anchor" href="#mgl%E5%8A%A8%E5%AF%86" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MGL动密.</h3>
-      <p>MGL动密是一个动态密码手机APP，支持IOS 和 各类安卓系统，正在路上.....</p>
-      <h3><a id="mgl所见即所得编辑器" class="anchor" href="#mgl%E6%89%80%E8%A7%81%E5%8D%B3%E6%89%80%E5%BE%97%E7%BC%96%E8%BE%91%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MGL所见即所得编辑器</h3>
-<p>MGL是WEB所见即所得编辑器，它比普通的富客户端不同的是它不仅有普通编辑器的功能，还支持蒙古文的书写！</p>
-<h3><a id="mgl博客系统" class="anchor" href="#mgl%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MGL博客系统</h3>
-<p>拥有自己的博客系统，正在路上</p>
-<h3>
-<a id="开发者列表" class="anchor" href="#%E5%BC%80%E5%8F%91%E8%80%85%E5%88%97%E8%A1%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>开发者列表</h3>
-
-<p>诚信邀请各类开发者加入我的团队</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p><a href="mailto:hotpot@mgl.tech">hotpot@mgl.tech</a></p>
-      <footer class="site-footer">
-        <span class="site-footer-credits">Create by <a href="http://weibo.com/531511789" target="_blank"> @Hotpot </a> .</span>
-      </footer>
-      
-      <div class="mgl-click-right-wrap" id="mgl_click_right_wrap" style="left: 179px; top: 324px;">
-	<ul id="mn_right">
-		<li>
-			<a class="mgl-click-right-wrap-a" href="http://aofmall.com" rel="nofollow noindex" target="_blank">
-				<span class="glyphicon glyphicon-globe"></span>
-				<span id="_history">去商城首页</span>
-			</a>
-		</li>
-		<li>
-			<a class="mgl-click-right-wrap-a" href="javascript:void(0);" rel="pjax" id="reload">
-				<span class="glyphicon glyphicon-refresh"></span>
-				<span>刷新</span>
-			</a>
-		</li>
-		<li>
-			<a class="mgl-click-right-wrap-a" href="#" rel="nofollow noindex">
-				<span class="glyphicon glyphicon-envelope"></span>
-				<span>意见交流</span>
-			</a>
-		</li>
-		<li>
-			<a href="http://aofmall.com/help/#items10" rel="nofollow noindex" class="mgl-click-right-wrap-a" target="_blank">
-				<span class="glyphicon glyphicon-info-sign"></span>
-				<span>关于</span>
-			</a>
-		</li>
-	</ul>
+<div class="mdui-appbar mdui-shadow-0">
+  <div class="mdui-toolbar mdui-text-color-white">
+    <a href="javascript:;" class="mdui-typo-title">MDUI</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <iframe class="github" src="http://ghbtns.com/github-btn.html?user=zdhxiong&amp;repo=mdui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+  </div>
 </div>
-<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>  
-      
-      <script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp"></script>  
-       <script src="//cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
-</section>
-    <script>
-      $.getJSON('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp',function(data){
-        console.info('data:' + data);
-      });
-      $(function(){
-             $('#ipaddr').text("您是" + remote_ip_info.country + remote_ip_info.province + remote_ip_info.city + "的访客");
-        
-        var rm = $('#mgl_click_right_wrap');
-        $(window).contextmenu(function(e){
-          e.stopPropagation();
-          e.preventDefault();
-          var pointX = e.pageX, pointY = e.pageY;
-          rm.css({left : pointX,top : pointY});
-          rm.show();
-          return;
-        }).click(function(){
-          rm.hide();
-        });
 
-        $('a#reload').click(function(){
-          window.location.reload(null);
-        })
-        
-        window.onkeydown = function(e) {
-          e = e || window.event;
-          if(e.keyCode === 123) {
-            mgl.m('控制台出不来了吧<br>请到www.aofmall.com寻求帮助','',{time : 5000});
-            e.stopPropagation();
-            e.preventDefault();
-            return false;
-          }
-        } 
-        
-       })
-       </script>
-    
-    <script src="http://s22.cnzz.com/z_stat.php?id=1000355772&web_id=1000355772" language="JavaScript"></script>
-  </body>
-</html>
+<div id="background-img"></div>
+
+<div id="intro" class="mdui-container-fluid">
+  <div class="title mdui-p-b-2">
+    <span class="mdui-text-color-pink-accent">M</span>aterial <span class="mdui-text-color-pink-accent">D</span>esign <span class="mdui-text-color-pink-accent">U</span>ser <span class="mdui-text-color-pink-accent">I</span>nterface
+  </div>
+  <div class="description mdui-typo">
+    <p>MDUI 是一套基于 Material Design 的前端框架。</p>
+    <p class="mdui-hidden-sm-down">轻量级、多主题切换、响应式、无依赖</p>
+  </div>
+  <a href="http://mdui-org.b0.upaiyun.com/source/mdui-v0.1.2.zip" class="download mdui-btn mdui-btn-raised mdui-color-pink-accent mdui-ripple mdui-m-a-2">下载</a>
+  <a href="./docs" class="docs mdui-btn mdui-btn-raised mdui-color-pink-accent mdui-ripple mdui-m-a-2">文档</a>
+  <p>当前版本：v0.1.2</p>
+</div>
+
+<div id="container">
+  <div class="mdui-container">
+    <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-lg-4">
+      <div class="mdui-col mdui-m-b-2">
+        <div class="mdui-card">
+          <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">轻量级</div>
+          </div>
+          <div class="mdui-card-content">
+            CSS 文件仅 <strong>26.4KB</strong> minified + gzip<br/>
+            JavaScript 文件仅 <strong>12KB</strong> minified + gzip
+          </div>
+        </div>
+      </div>
+      <div class="mdui-col mdui-m-b-2">
+        <div class="mdui-card">
+          <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">多主题切换</div>
+          </div>
+          <div class="mdui-card-content">
+            <strong>19</strong> 种主色、<strong>16</strong> 种强调色、<strong>1</strong> 种夜间主题<br/>
+            只需添加一个 CSS 类即可切换
+          </div>
+        </div>
+      </div>
+      <div class="mdui-col mdui-m-b-2">
+        <div class="mdui-card">
+          <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">响应式</div>
+          </div>
+          <div class="mdui-card-content">
+            移动优先<br/>
+            并可适配所有屏幕。
+          </div>
+        </div>
+      </div>
+      <div class="mdui-col mdui-m-b-2">
+        <div class="mdui-card">
+          <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">无依赖</div>
+          </div>
+          <div class="mdui-card-content">
+            使用纯 JavaScript 编写<br/>
+            没有任何依赖
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer" class="mdui-container mdui-typo mdui-text-center">
+    <p class="mdui-typo-body-1">2017@ <a href="./">mdui.org</a> MIT license</p>
+    <p class="mdui-typo-caption">友情链接：<a href="http://chuangzaoshi.com/" target="_blank">创造狮</a></p>
+  </div>
+</div>
+
+<script src="http://mdui-org.b0.upaiyun.com/source/dist/js/mdui.min.js?v=2be5cc527c70ff87f92bfca88be32414"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88818678-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
