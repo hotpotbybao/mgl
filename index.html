@@ -90,4 +90,24 @@
 <script src="javascript/mdui.min.js?v=2be5cc527c70ff87f92bfca88be32414"></script>
 
 <script src="http://s22.cnzz.com/z_stat.php?id=1000355772&web_id=1000355772" language="JavaScript"></script>
+  
+  <script>
+    function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+ 
+var flag = IsPC(); //true为PC端，false为手机端
+    console.info(flag);
+  </script>
 
