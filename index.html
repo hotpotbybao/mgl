@@ -18,10 +18,13 @@
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]-->
     <style>
-        html {
-            overflow-y: scroll;
-        }
-        .navbar-inverse {
+    html {
+        overflow-y: scroll;
+    }
+    body {
+        overflow: hidden;
+    }
+    .navbar-inverse {
         background-color: #3097D1;
     }
 
@@ -84,6 +87,7 @@
         -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         transform: translate(0, 0);
+        margin: 18% auto;
     }
 
     .modal-backdrop.in {
@@ -196,11 +200,16 @@
                     break;
                 case 1 :
                     console.info("dddd" + 1)
+                    $('html').addClass("modal-open");
                     $('.sign-up').modal('show');
                     break;
                 default:
                     break;
             }
+        });
+
+        $('.sign-up').on('hide.bs.modal',function () {
+            $('html').removeClass("modal-open");
         });
 
         var list_content = new Vue({
