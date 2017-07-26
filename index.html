@@ -70,14 +70,14 @@
             </div>
             <div class="row" id="mgl_row_content">
                 <div class="col-md-12 mgl-dialog-content-item" v-for="mgl in list">
-                    <a href="#">
+                    <a :href="mgl.fromUrl">
                         <h4>{{mgl.title}}</h4>
                     </a>
                     <p>
                         {{mgl.summary}}
                     </p>
                     <p>
-                        {{mgl.createTime}}<a class="btn btn-default" href="#" role="button">查看详情</a>
+                        {{mgl.createTime}}<a class="btn btn-default" :href="mgl.fromUrl" role="button">查看详情</a>
                     </p>
                 </div>
             </div>
