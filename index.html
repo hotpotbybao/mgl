@@ -65,19 +65,19 @@
             <div class="jumbotron">
                 <h1>少年回头是岸.....</h1>
                 <p>
-                    我们生产资源，也搬运资源...
+                    复杂的问题简单化，没有什么不可能！
                 </p>
             </div>
             <div class="row" id="mgl_row_content">
                 <div class="col-md-12 mgl-dialog-content-item" v-for="mgl in list">
-                    <a :href="mgl.fromUrl">
+                    <a :href="mgl.fromUrl" target="_blank">
                         <h4>{{mgl.title}}</h4>
                     </a>
                     <p>
                         {{mgl.summary}}
                     </p>
                     <p>
-                        {{mgl.createTime}}<a class="btn btn-default" :href="mgl.fromUrl" role="button">查看详情</a>
+                        {{mgl.createTime}}<a class="btn btn-default" :href="mgl.fromUrl" role="button" target="_blank">查看详情</a>
                     </p>
                 </div>
             </div>
