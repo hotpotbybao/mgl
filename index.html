@@ -29,6 +29,9 @@
             font-size: 12px;
         }
 
+        .mgl-dialog-content-item {
+            border-bottom: 1px solid #dedede;
+        }
     </style>
 </head>
 <body>
@@ -71,10 +74,10 @@
             <div class="row" id="mgl_row_content">
                 <div class="col-md-12 mgl-dialog-content-item" v-for="mgl in list">
                     <a :href="mgl.fromUrl" target="_blank">
-                        <h4>{{mgl.title}}</h4>
+                        <h4 v-text="mgl.title"></h4>
                     </a>
-                    <p>
-                        {{mgl.summary}}
+                    <p v-text="mgl.summary">
+                        正在载入中...
                     </p>
                     <p>
                         {{mgl.createTime}}<a class="btn btn-default" :href="mgl.fromUrl" role="button" target="_blank">查看详情</a>
