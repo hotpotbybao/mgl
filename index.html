@@ -1,5 +1,110 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>	<title>终于等到您- 别走</title><meta http-equiv=Content-Type content="text/html; charset=UTF-8" /><style type=text/css>  html,body {  width: 100%;  height: 100%;  margin: 0;  background: #03a9f4;  overflow-y: hidden;  padding:0;  background: linear-gradient(-45deg,  #FFC107, #E91E63, #03A9F4, #4CAF50);	background-size: 400% 400%;	animation: gbg 15s ease infinite;}* {	margin:0;	padding:0;}@keyframes gbg {	0% {		background-position: 0% 50%;	}	50% {		background-position: 100% 50%;	}	100% {		background-position: 0% 50%;	}}.mr {  display: flex;  align-items: center;  justify-content: center;  width: 100%;color: white;  height: 100%;    white-space: nowrap;}@keyframes typing {    from { width: 0}}@keyframes blink-caret {    100% { border-color: transparent; }} h1 {	font:bold 200% Consolas,Monaco,monospace;	border-right:.1em solid;	width:55ch;				 margin:2em 1em;	white-space:nowrap;	overflow:hidden;	animation:typing 3s steps(100,end),		 blink-caret .5s step-end infinite alternate;}	</style></head><body ><div class="mr"><h1 >这将会是一个贼溜贼溜的网站，但是没上线，ONO !!!</h1>	</div>
-</body><script>var tp = "https:";
-    if(window.location.protocol != tp) {
-        window.location.href = tp + window.location.href.substring(window.location.protocol.length);
-    }</script></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>终于等到您- 别走</title>
+    <meta http-equiv=Content-Type content="text/html; charset=UTF-8"/>
+    <style type=text/css>  html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: #03a9f4;
+        overflow-y: hidden;
+        padding: 0;
+        background: linear-gradient(-45deg, #FFC107, #E91E63, #03A9F4, #4CAF50);
+        background-size: 400% 400%;
+        animation: gbg 15s ease infinite;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    @keyframes gbg {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .mr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: white;
+        height: 100%;
+        white-space: nowrap;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    }
+
+    @keyframes blink-caret {
+        100% {
+            border-color: transparent;
+        }
+    }
+
+    h1 {
+        font: bold 200% Consolas, Monaco, monospace;
+        border-right: .1em solid;
+        width: 55ch;
+        margin: 2em 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3s steps(100, end), blink-caret .5s step-end infinite alternate;
+    }    </style>
+</head>
+<body>
+<div class="mr"><h1>这将会是一个贼溜贼溜的网站，但是没上线，ONO !!!</h1></div>
+</body>
+<script src="/js/l2dwidget.min.js"></script>
+<script>var tp = "https:";
+if (window.location.host.split(":")[0] != 'localhost' && window.location.protocol != tp) {
+    window.location.href = tp + window.location.href.substring(window.location.protocol.length);
+}
+var tororo = '/ld-md/live2d-widget-model-wanko/assets/wanko.model.json'; //卡通
+var hijiki = 'hijiki/assets/hijiki.model.json';
+
+function show(path) {
+    config.model.jsonPath = path;
+    L2Dwidget.init(config)
+}
+
+var config = {
+    model: {
+        jsonPath: '', // xxx.model.json 的路径
+    },
+    display: {
+        superSample: 1, // 超采样等级
+        width: 350, // canvas的宽度
+        height: 400, // canvas的高度
+        position: 'right', // 显示位置：左或右
+        hOffset: 0, // canvas水平偏移
+        vOffset: -50, // canvas垂直偏移
+    },
+    mobile: {
+        show: true, // 是否在移动设备上显示
+        scale: 1, // 移动设备上的缩放
+        motion: true, // 移动设备是否开启重力感应
+    },
+    react: {
+        opacityDefault: 1, // 默认透明度
+        opacityOnHover: 1, // 鼠标移上透明度
+    },
+}
+window.onload = function () {
+    show(tororo);
+}
+</script>
+</html>
